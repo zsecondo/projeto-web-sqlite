@@ -1,0 +1,40 @@
+PUT http://localhost:8080/pessoa
+Content-Type: application/json
+
+{
+   "id": 1,
+   "nome":"Gustavo",
+   "idades": 21
+}
+###
+GET http://localhost:8080/pessoas
+Content-Type: application/json
+
+{
+
+}
+
+###
+
+ 
+
+###
+DELETE http://localhost:8080/pessoa 
+Content-Type: application/json
+
+{
+   "id": 1
+}
+###
+POST http://localhost:8080/pessoa
+Content-Type: application/json
+
+{
+   "nome": "João Silva",
+    "email": "joao.silva@example.com",
+    "contato": "123-456-7890",
+    "endereco": "Rua Exemplo, 123",
+    "cnpj": "12345678901234",
+    "empresa": "Empresa Exemplo",
+    "senha": "senha123"
+}
