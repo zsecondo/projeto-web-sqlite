@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.elo{
+    
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    margin:  40px;
+}
+
+main {
+    text-align: center;
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.plan-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.plan {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: calc(33.33% - 40px); /* 33.33% para três contêineres, 40px para a margem nos lados */
+    margin: 0 10px; /* Espaço nos lados direito e esquerdo */
+    box-sizing: border-box;
+}
+
+.buy-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: block;
+}
