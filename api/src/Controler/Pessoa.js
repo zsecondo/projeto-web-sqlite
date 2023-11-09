@@ -70,3 +70,23 @@ export async function deletePessoa(req, res){
         statuscode: 200
         })
 }
+
+export async function getUserName(req, res) {
+    let email = req.query.email;
+    let senha = req.query.senha;
+    
+    openDb().then(db => {
+        db.get('SELECT nome FROM Pessoa WHERE email=? AND senha=?', [email, senha])
+            .then(usuario => {
+                if (usuario) {
+                    res.json({ nome: usuario.nome });
+                } else {
+                    res.status(404).json({ error: 'Usuário não encontrado' });
+                }
+            })
+            .catch(error => {
+                console.error(error);
+                res.status(500).json({ error: 'Erro ao buscar nome do usuário' });
+            });
+    });
+}
