@@ -1,3 +1,5 @@
+@import url('./variaveis.css');
+
 body {
     margin: 0;
     padding: 0;
@@ -14,16 +16,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
+    background-color: var(--color-primary);
 }
 
 .form-container {
+
     width: 70%;
-    max-width: 400px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 20px;
+    border: 0,5px solid #000000;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);    background-color: var(--color-secondary);
+    color: var(--color-quaternary);
 }
 
 form {
@@ -34,20 +38,23 @@ form {
 label,
 input {
     margin-bottom: 10px;
+    color: var(--color-quaternary);
 }
 
 button {
-    background-color: #4caf50;
+    background-color: var(--color-quaternary);
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 button:hover {
-    background-color: #45a049;
+    transition: 0.3s;
+    background-color: var(--color-secondary);
 }
+
 label {
     font-weight: bold;
     margin-bottom: 5px;
@@ -55,7 +62,7 @@ label {
 
 input {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     font-size: 16px;
     margin-bottom: 15px;
     border: 1px solid #ccc;

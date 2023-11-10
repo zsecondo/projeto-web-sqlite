@@ -6,3 +6,37 @@ const nomeUsuario = params.get('nome');
 if (nomeUsuario) {
     document.getElementById("nomeUsuario").textContent = nomeUsuario;
 } 
+
+// Seleciona o elemento do header
+var header = document.querySelector("header");
+
+// Obtém a posição inicial do header em relação ao topo da página
+var sticky = header.offsetTop;
+
+// Adiciona um evento de scroll à página
+window.onscroll = function () {
+    // Verifica se a posição do scroll ultrapassou a posição inicial do header
+    if (window.pageYOffset > sticky) {
+        // Adiciona a classe "fixed" ao header
+        header.classList.add("fixed");
+    } else {
+        // Remove a classe "fixed" do header
+        header.classList.remove("fixed");
+    }
+};
+function openModal() {
+    document.getElementById('modal').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+window.onclick = function(event) {
+    var modal = document.getElementById('modal');
+    if (event.target == modal) {
+        closeModal();
+    }
+}

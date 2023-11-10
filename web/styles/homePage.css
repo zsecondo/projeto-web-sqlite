@@ -1,29 +1,42 @@
+@import url('./variaveis.css');
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: var(--color-primary); /* Substituindo pela cor mais escura da variável de cor primária */
+    color: var(--color-quaternary); /* Substituindo pela cor mais escura da variável de cor quaternária */
+}
+
+header.fixed {
+    position: fixed;
+    right: 1px;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header {
-    background-color: #333;
-    color: white;
+    
+    height: 130px;
+    background-color: var(--color-quinta); /* Substituindo pela cor mais escura da variável de cor secundária */
+    color: var(--color-secondary); /* Substituindo pela cor mais escura da variável de cor quaternária */
     padding: 10px;
     display: flex;
     justify-content: space-between;
 }
-.elo{
-    
-}
 
 nav {
     display: flex;
+    margin-right: 60px;
 }
 
 nav a {
     font-weight: 400;
-    color: white;
+    font-size: 20px;
+    color: var(--color-secondary); /* Substituindo pela cor mais escura da variável de cor quaternária */
     text-decoration: none;
-    margin:  40px;
+    margin: 60px 40px;
 }
 
 main {
@@ -35,23 +48,80 @@ main {
 .plan-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 360px;
 }
 
 .plan {
+    position: relative;
     border: 1px solid #ccc;
-    padding: 20px;
-    width: calc(33.33% - 40px); /* 33.33% para três contêineres, 40px para a margem nos lados */
-    margin: 0 10px; /* Espaço nos lados direito e esquerdo */
+    padding: 20px; 
+    height: 500px;
+    border-radius: 15px;
+    width: calc(33.33% - 40px);
+    margin: 0 10px;
     box-sizing: border-box;
+    background-color: var(--color-secondary); /* Substituindo pela cor mais escura da variável de cor secundária */
+    color: var(--color-quaternary); /* Substituindo pela cor mais escura da variável de cor quaternária */
+    margin-bottom: 100px;
+}
+
+.plan-container, h3 {
+    font-size: 24px;
 }
 
 .buy-button {
-    background-color: #4caf50;
-    color: white;
+    
+    background-color: var(--color-tertiary); /* Substituindo pela cor mais escura da variável de cor terciária */
+    color: var(--color-quinta); /* Substituindo pela cor mais escura da variável de cor quaternária */
     border: none;
+    height: 20px;
+    border-radius: 10px;
     padding: 10px 20px;
     text-decoration: none;
-    margin-top: 20px;
+    margin-top: 250px;
     display: block;
 }
+
+.company-presentation {
+    margin-top: 90px;
+    margin-bottom: 100px;
+}
+.company-presentation, h2 {
+    margin-bottom: 70px;
+    font-size: 50px;
+}
+
+p {
+    letter-spacing: 2px; /* Ajuste o valor conforme necessário */
+
+    font-size: 20px;
+    line-height: 1.5; /* Ajuste o valor conforme necessário */
+}
+.segundP {
+    margin-top: 90px;
+}
+.elo, h1 {
+    position: relative;
+    left: 100px;
+    font-size: 50px;
+    top: 2px;
+}
+
+/* ... Seu código existente ... */
+
+footer {
+    height: 70px;
+    background-color: var(--color-quinta); /* Adapte para a cor desejada */
+    color: var(--color-secondary); /* Adapte para a cor desejada */
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    top: 50px; /* Ajuste conforme necessário para evitar sobreposição com o conteúdo */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ... Seu código existente ... */
