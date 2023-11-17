@@ -27,7 +27,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
             // Obter o nome do usuário retornado pela segunda chamada fetch
             nomeUsuario = data.nome;
             // Redirecionar para a página home.html e exibir o nome do usuário
-            window.location.href = `./home.html?nome=${nomeUsuario}`;
+            window.location.href = `./homeAuth.html?nome=${nomeUsuario}`;
         })
         .catch(error => {
             console.error(error);

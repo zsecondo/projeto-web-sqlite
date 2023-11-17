@@ -4,7 +4,8 @@ const nomeUsuario = params.get('nome');
 
 // Verificar se o nome do usuário existe e atualizar o elemento HTML
 if (nomeUsuario) {
-    document.getElementById("nomeUsuario").textContent = nomeUsuario;
+    const saniNome = `Ola ${nomeUsuario}`
+    document.getElementById("nomeUsuario").textContent = saniNome;
 } 
 
 // Seleciona o elemento do header

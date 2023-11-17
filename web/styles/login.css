@@ -68,3 +68,21 @@ input {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+.cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 15px;
+    background-color: var(--color-quaternary);
+    border-radius: 15px;
+    color: white;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.cadastro:hover {
+    transition: 0.3s;
+    background-color: var(--color-secondary);
+}
