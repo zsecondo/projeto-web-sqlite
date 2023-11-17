@@ -15,14 +15,7 @@ export async function selectPessoas(req, res){
     })
    
 }
-export async function selectPessoa(req, res){
-    let id = req.body.id
-        openDb().then(db=>{
-            db.get('SELECT * FROM Pessoa WHERE id=?',[id])
-                .then(pessoa => res.json(pessoa))
-     })
-     
- }
+
 
 export async function createTable(){
     openDb().then(db=>{
@@ -51,30 +44,13 @@ export async function insertPessoa(req, res){
         })
 }
 
-export async function updatePessoa(req, res){
-    let pessoa = req.body;
-    openDb().then(db=>{
-        db.run('UPDATE Pessoa SET nome=?, idades=? WHERE id=?', [pessoa.nome, pessoa.idades, pessoa.id])
-    })
-    res.json({
-        statuscode: 200
-        })
-}
-export async function deletePessoa(req, res){
-    let id = req.body.id
-        openDb().then(db=>{
-            db.get('DELETE FROM Pessoa WHERE id=?', [id])
-                .then(pessoa=> res.json(pessoa))
-    })
-    res.json({
-        statuscode: 200
-        })
-}
+
+
 
 export async function getUserName(req, res) {
     let email = req.query.email;
     let senha = req.query.senha;
-    
+
     openDb().then(db => {
         db.get('SELECT nome FROM Pessoa WHERE email=? AND senha=?', [email, senha])
             .then(usuario => {

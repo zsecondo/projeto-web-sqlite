@@ -1,11 +1,4 @@
-PUT http://localhost:8080/pessoa
-Content-Type: application/json
 
-{
-   "id": 1,
-   "nome":"Gustavo",
-   "idades": 21
-}
 ###
 GET http://localhost:8080/pessoas
 Content-Type: application/json
@@ -14,17 +7,6 @@ Content-Type: application/json
 
 }
 
-###
-
- 
-
-###
-DELETE http://localhost:8080/pessoa 
-Content-Type: application/json
-
-{
-   "id": 1
-}
 ###
 POST http://localhost:8080/pessoa
 Content-Type: application/json

@@ -4,7 +4,7 @@ const nomeUsuario = params.get('nome');
 
 // Verificar se o nome do usuário existe e atualizar o elemento HTML
 if (nomeUsuario) {
-    const saniNome = `Ola ${nomeUsuario}`
+    const saniNome = `Olá ${nomeUsuario}`
     document.getElementById("nomeUsuario").textContent = saniNome;
 } 
 
